@@ -17,24 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="css/small-business.css" rel="stylesheet">
 
-    <!-- Temporary navbar container fix -->
-    <style>
-    .navbar-toggler {
-        z-index: 1;
-    }
-    
-    @media (max-width: 576px) {
-        nav > .container {
-            width: 100%;
-        }
-    }
-        .carousel-inner .carousel-item img {
-            margin:auto;
-        }
-        p {
-            font-size: 20px;
-        }
-    </style>
+    <link href = "css/style.css" rel ="stylesheet" type = "text/css">
 
 </head>
 
@@ -46,20 +29,20 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container">
-            <a class="navbar-brand" href="#">Шань Линь</a>
+            <a class="navbar-brand" href="#top">Шань Линь</a>
             <div class="collapse navbar-collapse" id="navbarExample">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Обо мне</a>
+                        <a class="nav-link" href="#top">Обо мне</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Услуги и цены</a>
+                        <a class="nav-link" href="#price">Услуги и цены</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Отзывы</a>
+                        <a class="nav-link" href="#review">Отзывы</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
+                        <a class="nav-link" href="#contact">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -70,12 +53,12 @@
     <div class="container">
 
         <!-- Heading Row -->
-        <div class="row my-4">
-            <div class="col-lg-8">
+        <div class="row my-4" id ="top" class = "anchor">
+            <div class="col-lg-6">
                 <img class="img-fluid img-thumbnail" src="img/shanlin.jpg" alt="">
             </div>
             <!-- /.col-lg-8 -->
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <h1>Шань Линь - репетитор по китайскому языку</h1>
                 <h3>Обо мне</h3>
                 <ul>
@@ -114,46 +97,47 @@
                     </li>
                 </ul>
                 <p></p>
-                <a class="btn btn-primary btn-lg" href="#">Свяжись со мной!</a>
+                <a class="btn btn-primary btn-lg" href="#contact">Свяжитесь со мной!</a>
             </div>
             <!-- /.col-md-4 -->
         </div>
         <!-- /.row -->
-
-  <h2>Услуги и цены</h2>        
-  <table class="table table-hover">
-    <thead>
-        <tr><td></td><td>В группе</td><td>Индивидуально</td></tr>  
-    </thead>
-    <tbody>
-      <tr>        
-        <td>Занятия с детьми</td>
-        <td>300 рублей в час</td>
-        <td>500 рублей в час</td>
-      </tr>       
-      <tr>
-        <td>Занятия со взрослыми</td>
-        <td>450 рублей в час</td>
-        <td>850 рублей в час</td>
-      </tr>        
-      <tr>        
-        <td>Подготовка к ГИА</td>
-        <td>500 рублей в час</td>
-        <td>900 рублей в час</td>
-      </tr>    
-      <tr>
-        <td>Подготовка к ЕГЭ</td>
-        <td>700 рублей в час</td>
-        <td>1000 рублей в час</td>
-      </tr>  
-      <tr>
-        <td>Подготовка к HSK</td>
-        <td>750 рублей в час</td>
-        <td>1200 рублей в час</td>
-      </tr>  
-    </tbody>
-  </table>
-        
+  <div id ="price" style = "padding-top:80px;" class = "anchor">
+    <h2>Услуги и цены</h2>        
+    <table class="table table-hover">
+      <thead>
+          <tr><td></td><td>В группе</td><td>Индивидуально</td></tr>  
+      </thead>
+      <tbody>
+        <tr>        
+          <td>Занятия с детьми</td>
+          <td>300 рублей в час</td>
+          <td>500 рублей в час</td>
+        </tr>       
+        <tr>
+          <td>Занятия со взрослыми</td>
+          <td>450 рублей в час</td>
+          <td>850 рублей в час</td>
+        </tr>        
+        <tr>        
+          <td>Подготовка к ГИА</td>
+          <td>500 рублей в час</td>
+          <td>900 рублей в час</td>
+        </tr>    
+        <tr>
+          <td>Подготовка к ЕГЭ</td>
+          <td>700 рублей в час</td>
+          <td>1000 рублей в час</td>
+        </tr>  
+        <tr>
+          <td>Подготовка к HSK</td>
+          <td>750 рублей в час</td>
+          <td>1200 рублей в час</td>
+        </tr>  
+      </tbody>
+    </table>
+  </div>
+  <div id = "review" class = "anchor">  
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -191,66 +175,70 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>      
+    </div> 
+  </div>     
 </div>
     <!-- /.container -->
     
-    <div class = "container">
+    <div class = "container anchor" id = "contact">
             <address>
                 <form action = "action.php" method = "post"  class="form-horizontal">
-                     <div class="form-group">
-                        <label for="name" class = "control-label col-sm-12"><b>Как Вас зовут?</b></label>
-                        <input type="text" class="form-control col-sm-12" id="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="age" class = "control-label col-sm-12"><b>Сколько Вам лет?</b></label>
-                        <input type="text" class="form-control col-sm-12" id="age">
-                    </div>
-                    <div class="form-group">
-                        <label for="tel" class = "control-label col-sm-12"><b>Как Вам лучше позвонить?</b></label>
-                        <input type="tel" class="form-control col-sm-12" id="tel">
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class = "control-label col-sm-12"><b>По какому e-mail Вам лучше написать?</b></label>
-                        <input type="email" class="form-control col-sm-12" id="email">
-                    </div>
-                    <div class="form-group">
-                       <b>Для каких целей Вам необходим китайский?</b> <br>
-                            <input type="checkbox" name="goal1" value="me">Для себя<br>
-                            <input type="checkbox" name="goal2" value="job">Для карьеры<br>
-                            <input type="checkbox" name="goal3" value="study">Для учёбы<br>
-                            <input type="checkbox" name="goal4" value="travel">Для путешествий<br>
-                            <input type="checkbox" name="goal5" value="exam">Для сдачи ЕГЭ или ГИА<br>
-                            <input type="checkbox" name="goal6" value="hsk">Для сдачи HSK<br>
-                            <input type="checkbox" name="goal7" value="lover">Любимый человек из Китая<br>
-                            <input type="checkbox" name="goal8" value="other">Другое<br>
-                    </div>
-                    <div class="form-group">
-                        <b>Вы изучали китайский ранее?</b><br>
-                            <input type="checkbox" name="prev1" value="no">Нет, не изучал(а)<br>
-                            <input type="checkbox" name="prev2" value="me">Да, самостоятельно<br>
-                            <input type="checkbox" name="prev3" value="privTeach">Да, с репетитором<br>
-                            <input type="checkbox" name="prev4" value="courses">Да, на курсах<br>
-                            <input type="checkbox" name="prev5" value="school">Да, в школе<br>
-                            <input type="checkbox" name="prev6" value="uni">Да, жил(а) в Китае<br>
-                            <input type="checkbox" name="prev7" value="family">Да, в семье говорили (говорят) по-китайски<br>
-                            <input type="checkbox" name="prev8" value="other">Да, другое<br>
-                    </div>
-                    <div class="form-group">
-                        <b>С каким разделом китайского у Вас наибольшие проблемы?</b><br>
-                            <input type="checkbox" name="problems1" value="no">Ни с каким: я пока не знаю китайского<br>
-                            <input type="checkbox" name="problems2" value="me">Письмо<br>
-                            <input type="checkbox" name="problems3" value="courses">Произношение<br>
-                            <input type="checkbox" name="problems4" value="school">Разговорная речь<br>
-                            <input type="checkbox" name="problems5" value="uni">Грамматика<br>
-                            <input type="checkbox" name="problems6" value="family">Чтение<br>
-                            <input type="checkbox" name="problems7" value="other">Восприятие на слух<br>
-                            <input type="checkbox" name="problems8" value="other">Китайская культура и жизнь в Китае<br>
-                    </div>
-                    <div class="form-group"> 
-                        <div class="col-sm-offset-2 col-sm-10">
-                          <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
-                        </div>
+                      <h3>Форма связи</h3>
+                    <div class = "row">
+                       <div class="form-group col-md-6">
+                          <label for="name" class = "control-label col-sm-12"><b>Как Вас зовут?</b></label>
+                          <input type="text" class="form-control col-sm-12" id="name">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="age" class = "control-label col-sm-12"><b>Сколько Вам лет?</b></label>
+                          <input type="text" class="form-control col-sm-12" id="age">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="tel" class = "control-label col-sm-12"><b>Как Вам лучше позвонить?</b></label>
+                          <input type="tel" class="form-control col-sm-12" id="tel">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="email" class = "control-label col-sm-12"><b>По какому e-mail Вам лучше написать?</b></label>
+                          <input type="email" class="form-control col-sm-12" id="email">
+                      </div>
+                      <div class="form-group col-md-6">
+                         <b>Для каких целей Вам необходим китайский?</b> <br>
+                              <input type="checkbox" name="goal1" value="me">Для себя<br>
+                              <input type="checkbox" name="goal2" value="job">Для карьеры<br>
+                              <input type="checkbox" name="goal3" value="study">Для учёбы<br>
+                              <input type="checkbox" name="goal4" value="travel">Для путешествий<br>
+                              <input type="checkbox" name="goal5" value="exam">Для сдачи ЕГЭ или ГИА<br>
+                              <input type="checkbox" name="goal6" value="hsk">Для сдачи HSK<br>
+                              <input type="checkbox" name="goal7" value="lover">Любимый человек из Китая<br>
+                              <input type="checkbox" name="goal8" value="other">Другое<br>
+                      </div>
+                      <div class="form-group col-md-6">
+                          <b>Вы изучали китайский ранее?</b><br>
+                              <input type="checkbox" name="prev1" value="no">Нет, не изучал(а)<br>
+                              <input type="checkbox" name="prev2" value="me">Да, самостоятельно<br>
+                              <input type="checkbox" name="prev3" value="privTeach">Да, с репетитором<br>
+                              <input type="checkbox" name="prev4" value="courses">Да, на курсах<br>
+                              <input type="checkbox" name="prev5" value="school">Да, в школе<br>
+                              <input type="checkbox" name="prev6" value="uni">Да, жил(а) в Китае<br>
+                              <input type="checkbox" name="prev7" value="family">Да, в семье говорили (говорят) по-китайски<br>
+                              <input type="checkbox" name="prev8" value="other">Да, другое<br>
+                      </div>
+                      <div class="form-group col-md-6">
+                          <b>С каким разделом китайского у Вас наибольшие проблемы?</b><br>
+                              <input type="checkbox" name="problems1" value="no">Ни с каким: я пока не знаю китайского<br>
+                              <input type="checkbox" name="problems2" value="me">Письмо<br>
+                              <input type="checkbox" name="problems3" value="courses">Произношение<br>
+                              <input type="checkbox" name="problems4" value="school">Разговорная речь<br>
+                              <input type="checkbox" name="problems5" value="uni">Грамматика<br>
+                              <input type="checkbox" name="problems6" value="family">Чтение<br>
+                              <input type="checkbox" name="problems7" value="other">Восприятие на слух<br>
+                              <input type="checkbox" name="problems8" value="other">Китайская культура и жизнь в Китае<br>
+                      </div>
+                      <div class="form-group"> 
+                          <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+                          </div>
+                      </div>
                     </div>
                 </form>
             </address>  
