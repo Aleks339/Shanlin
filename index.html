@@ -177,7 +177,7 @@
                       </div>
                       <div class="form-group col-md-6">
                           <label for="age" class = "control-label col-sm-12"><b>Сколько Вам лет?</b></label>
-                          <input type="text" class="form-control col-sm-12" id="age">
+                          <input type="text" class="form-control col-sm-12" id="age" name = "age">
                       </div>
                       <div class="form-group col-md-6">
                           <label for="tel" class = "control-label col-sm-12"><b>Как Вам лучше позвонить?</b></label>
@@ -295,6 +295,12 @@
             var phone_pattern = new RegExp (/([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/); 
             return phone_pattern.test(TelNum);
         }
+      $('input[name="age"]').keyup(function(e){
+          if (/\D/g.test(this.value)){
+            this.value = this.value.replace(/\D/g, '');
+          }
+        });  
+        
       })
     </script>
 </body>
