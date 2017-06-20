@@ -280,15 +280,21 @@
           if (!isValidEmailAddress($("#email").val())){
             $("#message").text('Укажите, пожалуйста, корректный почтовый адрес');
             return false;
-          }                    
+          }  
+          if (!isValidTelNum($("#tel").val())){
+            $("#message").text('Укажите, пожалуйста, корректный телефонный номер');
+            return false;
+          }
           return true;
         }
         function isValidEmailAddress(emailAddress) {
             var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
             return pattern.test(emailAddress);
         }
-        $("#phone").inputmask("+7(999)999-99-99")
-
+        function isValidTelNum(TelNum) {
+            var phone_pattern = new RegExp (/([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/); 
+            return phone_pattern.test(TelNum);
+        }
       })
     </script>
 </body>
